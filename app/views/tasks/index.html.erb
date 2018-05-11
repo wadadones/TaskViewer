@@ -7,9 +7,11 @@
     <tr>
       <th>Name</th>
       <th>Done</th>
-      <th>Plan</th>
+      <th>PlanStart</th>
+      <th>PlanEnd</th>
       <th>Plantime</th>
-      <th>Results</th>
+      <th>ResultsStart</th>
+      <th>ResultsEnd</th>
       <th>Resultstime</th>
       <th colspan="3"></th>
     </tr>
@@ -20,9 +22,11 @@
       <tr>
         <td><%= task.name %></td>
         <td><%= task.done %></td>
-        <td><%= task.plan %></td>
+        <td><%= task.plan1 %></td>
+        <td><%= task.plan2 %></td>
         <td><%= task.planTime %></td>
-        <td><%= task.results %></td>
+        <td><%= task.results1 %></td>
+        <td><%= task.results2 %></td>
         <td><%= task.resultsTime %></td>
         <td><%= link_to 'Show', task %></td>
         <td><%= link_to 'Edit', edit_task_path(task) %></td>

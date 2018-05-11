@@ -1,6 +1,21 @@
 class TasksController < ApplicationController
   before_action :set_task, only: [:show, :edit, :update, :destroy]
 
+  def time_calc(t1, t2)
+    t1h, t1m = t1.split(':').map(&:to_i)
+    t2h, t2m = t2.split(':').map(&:to_i)
+    tmph = t2h-t1h
+    tmpm = t2m-t1m
+    if tmpm < 0 then
+      tmph -= 1
+      tmpm = 60 + tmpm
+    end
+    if tmpm < 10 then
+      return tmph.to_s+":0"+tmpm.to_s
+    else
+      return tmph.to_s+":"+tmpm.to_s
+    end
+  end
   # GET /tasks
   # GET /tasks.json
   def index
@@ -24,8 +39,20 @@ class TasksController < ApplicationController
   # POST /tasks
   # POST /tasks.json
   def create
-    @task = Task.new(task_params)
-
+      @task = Task.new(
+      name: params[:task][:name],
+      plan1: params[:task][:plan1],
+      plan2: params[:task][:plan2],
+      results1: params[:task][:results1],
+      results2: params[:task][:results2],
+      resultsTime: params[:task][:resultsTime]
+      )
+      if params[:task][:plan1].empty? || params[:task][:plan2].empty? then
+        @task.planTime = params[:task][:planTime]
+      else
+        @task.planTime = time_calc(params[:task][:plan1],params[:task][:plan2])
+      end
+    #@task = Task.new(task_params)
     respond_to do |format|
       if @task.save
         format.html { redirect_to @task, notice: 'Task was successfully created.' }

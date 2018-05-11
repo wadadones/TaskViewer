@@ -16,14 +16,16 @@
     <%= form.text_field :name, id: :task_name %>
   </div>
 
-  <div class="field">
+  <!--<div class="field">
     <%= form.label :done %>
     <%= form.text_field :done, id: :task_done %>
-  </div>
+  </div>-->
 
   <div class="field">
-    <%= form.label :plan %>
-    <%= form.text_field :plan, id: :task_plan %>
+    <%= form.label :plan1 %>
+    <%= form.text_field :plan1, id: :task_plan1 %>
+    <%= form.label :plan2 %>
+    <%= form.text_field :plan2, id: :task_plan2 %>
   </div>
 
   <div class="field">
@@ -31,15 +33,17 @@
     <%= form.text_field :planTime, id: :task_planTime %>
   </div>
 
-  <div class="field">
-    <%= form.label :results %>
-    <%= form.text_field :results, id: :task_results %>
+  <!--<div class="field">
+    <%= form.label :results1 %>
+    <%= form.text_field :results1, id: :task_results %>
+    <%= form.label :results2 %>
+    <%= form.text_field :results2, id: :task_results %>
   </div>
 
   <div class="field">
     <%= form.label :resultsTime %>
     <%= form.text_field :resultsTime, id: :task_resultsTime %>
-  </div>
+  </div>-->
 
   <div class="actions">
     <%= form.submit %>
