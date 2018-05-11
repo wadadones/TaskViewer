@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: 
+  done: 
+  plan: 
+  planTime: 
+  results: 
+  resultsTime: 
+
+two:
+  name: 
+  done: 
+  plan: 
+  planTime: 
+  results: 
+  resultsTime: 
