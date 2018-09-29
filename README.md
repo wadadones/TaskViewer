@@ -1,24 +1,3 @@
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# TaskViewer
+・自分のあるタスクを管理したい!という思いから、習いたてのRailsの練習がてら作成してみた  
+・タスクを登録して表として表示し、チェックボックスにチェックつけたら消える単純なシステム  
