@@ -44,6 +44,7 @@ group :development, :test do
   gem 'pry-doc'
   gem 'hirb'
   gem 'hirb-unicode'
+  #gem 'rails-erd'
 end
 
 group :development do

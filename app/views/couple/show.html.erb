@@ -1,0 +1,5 @@
+<%= @couples.each do |couple|%>
+	<p><%=Man.find(couple.man_id).name%> and <%=Woman.find(couple.woman_id).name%></p>
+<% end %>
+
+<a href="/couple/form">form

@@ -1,5 +1,9 @@
 <%= form_tag('/couple/form/send') do %>
+  <label>男</label>
   <input type="text" name="man_name">
+  <label>女</label>
   <input type="text" name="woman_name">
   <%= submit_tag "申請",data: { confirm: "入力情報に間違いはないですか？"}%>
 <% end %>
+
+<a href="/couple/show">show
